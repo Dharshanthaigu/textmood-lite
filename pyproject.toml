@@ -16,3 +16,25 @@ textmood = "textmood_lite.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/textmood_lite"]
+
+[project.optional-dependencies]
+dev=["black","ruff","mypy","pytest"]
+
+[tool.black] 
+line-length = 88
+target-version = ["py39"]
+
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select=["E","F","I","UP"]
+
+[tool.mypy]
+python_version="3.10"
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
