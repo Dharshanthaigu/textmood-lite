@@ -11,11 +11,11 @@ def test_cli_outputs_mood():
     assert result.stdout.strip() == "happy"
 
 
-def test_cli_no_args_shows_usage():
-    result = subprocess.run(
-        [sys.executable, "-m", "textmood_lite.cli"], capture_output=True, rext=True
-    )
-    assert result.stdout.strip() == "happy"
+# def test_cli_no_args_shows_usage():
+#     result = subprocess.run(
+#         [sys.executable, "-m", "textmood_lite.cli"], capture_output=True, rext=True
+#     )
+#     assert result.stdout.strip() == "happy"
 
 
 def test_cli_no_args_shows_usage():
