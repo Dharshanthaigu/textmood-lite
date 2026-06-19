@@ -16,7 +16,7 @@ dependencies = ["typer[all]>=0.9.0", "fastapi>=0.100.0", "uvicorn>=0.23.0"]
 textmood = "textmood_lite.cli:main"
 
 [project.optional-dependencies]
-dev = ["black", "ruff", "mypy", "pytest", "pre-commit", "httpx2"]
+dev = ["black", "ruff", "mypy", "pytest", "pre-commit", "httpx2","build", "twine"]
 docs = ["mkdocs", "mkdocs-material", "mkdocstrings[python]"]
 
 [tool.hatch.build.targets.wheel]
