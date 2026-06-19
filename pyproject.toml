@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "textmood-lite"
-version = "0.1.0"
+version = "0.1.1"
 description = "A tiny keyword-based mood detector for text"
 authors = [{name = "Your Name", email = "you@example.com"}]
 readme = "README.md"
