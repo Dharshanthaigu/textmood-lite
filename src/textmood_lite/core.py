@@ -15,7 +15,6 @@ def _tokenize(text: str) -> list[str]:
 
 
 def analyze(text: str) -> dict[str, int]:
-    """Return a score for each moodf found in the text"""
     tokens = _tokenize(text)
     scores = {mood: 0 for mood in _LEXICON}
     for token in tokens:
