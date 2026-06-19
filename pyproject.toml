@@ -10,36 +10,32 @@ authors = [{name = "Your Name", email = "you@example.com"}]
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
+dependencies = ["typer[all]>=0.9.0", "fastapi>=0.100.0", "uvicorn>=0.23.0"]
 
 [project.scripts]
 textmood = "textmood_lite.cli:main"
 
+[project.optional-dependencies]
+dev = ["black", "ruff", "mypy", "pytest", "pre-commit", "httpx2"]
+docs = ["mkdocs", "mkdocs-material", "mkdocstrings[python]"]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/textmood_lite"]
 
-[project.optional-dependencies]
-dev=["black","ruff","mypy","pytest","pre-commit", "httpx2"]
-docs = ["mkdocs","mkdocs-material","mkdocstrings[python]"]
-
-[project.dependencies]
-dependencies = ["typer[all]>=0.9.0","fastapi>=0.100.0","uvicorn>=0.23.0"]
-
-[tool.black] 
+[tool.black]
 line-length = 88
-target-version = ["py39"]
-
+target-version = ["py310"]
 
 [tool.ruff]
 line-length = 88
 
 [tool.ruff.lint]
-select=["E","F","I","UP"]
+select = ["E", "F", "I", "UP"]
 
 [tool.mypy]
-python_version="3.10"
+python_version = "3.10"
 warn_unused_ignores = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-v"
-
